@@ -207,7 +207,7 @@ js <- 'function(el) {
 
 # create uris (this locates the images so they can be used in the plot)
 uris <- purrr::map_chr(
-  all$New_sample_name, ~base64enc::dataURI(file = sprintf("Spis_images/resize/%s.JPG", .x))
+  all$New_sample_name, ~base64enc::dataURI(file = sprintf("Spis_images/%s.JPG", .x))
 )
 
 
