@@ -136,7 +136,7 @@ customdata <- character(length(PCA_all.df$Sample_name))
 
 # Loop to assign the first image filename to each sample
 for (i in seq_along(PCA_all.df$Sample_name)) {
-  sample_number <- extract_sample_number(PCA_all.df$Sample_name[i])
+  sample_number <- extract_id(PCA_all.df$Sample_name[i])
   if (sample_number %in% names(image_filenames_grouped)) {
     customdata[i] <- image_filenames_grouped[[sample_number]][1]  # Use the first image URL for each sample
   } else {
